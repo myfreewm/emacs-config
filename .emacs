@@ -7,7 +7,7 @@
 
 ;;; ui
 
-(setq inhibit-startup-message t)
+;;(setq inhibit-startup-message t)
 
 (setq-default cursor-type 'bar)
 
@@ -48,9 +48,7 @@
 
 (delete-selection-mode t)
 
-;;(global-company-mode t)
-
-
+(global-set-key (kbd "TAB") 'self-insert-command); 
 (cua-mode t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -58,9 +56,9 @@
 (global-font-lock-mode t)
 
 (add-to-list 'load-path "~/.emacs.d/elpa/evil-20180911.959/")
-
 (require 'evil)
 
+(setq evil-shift-width 4)
 (evil-mode 1)
 
 (add-to-list 'load-path "~/.emacs.d/elpa/ivy-0.10.0/")
@@ -81,3 +79,13 @@
 (electric-pair-mode t)
 
 (set-default-font "Î¢ÈíÑÅºÚ-14")
+
+;; reset font
+
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+
+
+
