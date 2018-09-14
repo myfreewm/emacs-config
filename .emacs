@@ -87,5 +87,14 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
+;; mouse
 
+(xterm-mouse-mode t)
+
+;; evil
+
+;; key-binding
+
+(global-set-key (kbd "<f7>") 'eval-buffer)
+(global-set-key (kbd "<f2>") 'open-my-init-file)
 
